@@ -84,6 +84,14 @@ nav a.active{
     z-index: -1;
     filter: brightness(0.6);
 }
+.overlay{
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    background: rgba(0,0,0,0.3);
+    border-radius: 12px;
+    max-width: 800px;
+}
 .overlay h1{
     font-size:4.5rem;
     margin-bottom: 1rem;
@@ -97,4 +105,51 @@ nav a.active{
     font-weight: 300;
     line-height: 1.4;
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+.hero-button{
+    display:inline-block;
+    background-color: #22d3ee;
+    color: #1a202c;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3 ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.hero-button:hover{
+    background-color: #0284c7;
+    color: white;
+    border-color: #22d3ee;
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+
+}
+.mission{
+    padding: 5rem 0;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0,0.15);
+    border-radius: 12px;
+    margin-top:-80px;
+    position:relative;
+    z-index: 2;
+}
+.mission-content{
+    max-width: 900px;
+    margin: 0 auto;
+}
+.mission-content p{
+    font-size: 1.3rem;
+    color: #4a5568;
+    max-width: 800px;
+    margin:0 auto;
+    line-height: 1.8;
+}
+.mission-icon{
+    color: #0284c7;
+    font-size: 3rem;
+    margin-right: 15px;
+    vertical-align: middle;
 }

@@ -107,7 +107,7 @@ nav a.active{
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 .hero-button{
-    display:inline-block;
+    display: inline-block;
     background-color: #22d3ee;
     color: #1a202c;
     padding: 1.2rem 2.5rem;
@@ -115,8 +115,9 @@ nav a.active{
     font-weight: 700;
     text-decoration: none;
     border-radius: 50px;
-    transition: all 0.3 ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border: 2px solid transparent;
 }
 .hero-button:hover{
     background-color: #0284c7;

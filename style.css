@@ -270,12 +270,16 @@ nav a.active {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
-.service-card i {
+/* .service-card i {
     font-size: 3.5rem;
     color: #0284c7;
     margin-bottom: 1.5rem;
+} */
+.card-img{
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 1.5rem;
 }
-
 .service-card h3 {
     font-size: 1.1rem;
     color: #4a5568;

@@ -1,58 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UFT-8">
-    <title>Feedback page</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>EnerFlow | [Page Title Here]</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Fonts: Inter for general text -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Link to external stylesheet for global styles (assuming this file is named style.css) -->
+   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Feedback.css">
+
+  <!-- Favicon for browser tab icon -->
+  <link rel="icon" href="https://placehold.co/32x32/0a73b7/ffffff?text=EF" type="image/x-icon">
+  <style>
+    /*
+      Add any page-specific CSS styles here if needed.
+      Global styles are loaded from style.css.
+    */
+  </style>
 </head>
 <body>
-<h1>Feedback </h1>
-<h1>Leave your thoughts...</h1>
-<form>
-    <fieldset>
-        <legend>Personal Details</legend>
-        <label for="full-name">Full name*:</label>
-        <input type="text" name="full-name" required title="Please enter your full name">
-        <label for="email">Email*:</label>
-        <input type="email" name="email" required title="Please enter valid Email">
-        <label for="tel">Telephone Number:</label>
-        <input type="tel" name="tel" title="Please enter a valid phone number">
-        <label for="address">Address:</label>
-        <textarea id="address" name="address" rows="4" maxlength="200"></textarea>
-    </fieldset>
-    <fieldset>
-        <legend>Feedback Details</legend>
-        <label for="comment">Comment*:</label>
-        <textarea id="comment" name="comment" rows="4" maxlength="500" required title="Please enter your Feedback"></textarea>
-        <p>Characters remaining :<span id="char-count">500</span></p>
-        <label for="rating">Rate us:</label>
-        <div class="rating">
-            <span class="star" data-value="1">★</span>
-            <span class="star" data-value="2">★</span>
-            <span class="star" data-value="3">★</span>
-            <span class="star" data-value="4">★</span>
-            <span class="star" data-value="5">★</span>
-        </div>
-        <label for="category">Category:</label>
-        <select  name="category">
-            <option value="general">General Feedback</option>
-            <option value="suggestion">Suggestion</option>
-            <option value="complaint">Complaint</option>
-        </select>
-        <label for="file-upload">Upload File:</label>
-        <input type="file" id="file-upload" name="file-upload" accept="image/*,.pdf">
-        <label>Preferences:</label>
-      <input type="checkbox" id="updates" name="updates" value="email-updates">
-      <label for="updates">Receive email updates</label>
-      <input type="radio" id="satisfied-yes" name="satisfied" value="yes">
-      <label for="satisfied-yes">Satisfied</label>
-      <input type="radio" id="satisfied-no" name="satisfied" value="no">
-      <label for="satisfied-no">Not Satisfied</label>
-      <input type="radio" id="satisfied-no" name="satisfied" value="no">
-    </fieldset>
-    <button type="submit">Submit</button>
-    <button type="reset">Reset</button>
-</form>
+
+<header>
+  <div class="logo-container">
+    <img src="images/officiallogo.png" alt="EnerFlow Logo" height="40"> 
+    <h1>EnerFlow</h1>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="table.html">Table</a>
+    <a href="profile.html">Profile</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="sitemap.html">Sitemap</a>
+    <a href="team.html">Team</a>
+  </nav>
+</header>
+
+<main>
+  <body>
+    <h1 style="text-align: center;">Feedback </h1>
+    <h1 style="text-align: center;">Leave your thoughts...</h1>
+    <form>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="full-name">Full name*:</label>
+            <input type="text" name="full-name" required title="Please enter your full name">
+            <label for="email">Email*:</label>
+            <input type="email" name="email" required title="Please enter valid Email">
+            <label for="tel">Telephone Number:</label>
+            <input type="tel" name="tel" title="Please enter a valid phone number">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" maxlength="200"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Feedback Details</legend>
+            <label for="comment">Comment*:</label>
+            <textarea id="comment" name="comment" rows="4" maxlength="500" required title="Please enter your Feedback"></textarea>
+            <p>Characters remaining :<span id="char-count">500</span></p>
+            <label for="rating">Rate us:</label>
+            <div class="rating">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+            </div>
+            <label for="category">Category:</label>
+            <select  name="category">
+                <option value="general">General Feedback</option>
+                <option value="suggestion">Suggestion</option>
+                <option value="complaint">Complaint</option>
+            </select>
+            <label for="file-upload">Upload File:</label>
+            <input type="file" id="file-upload" name="file-upload" accept="image/*,.pdf">
+            <label>Preferences:</label>
+          <input type="checkbox" id="updates" name="updates" value="email-updates">
+          <label for="updates">Receive email updates</label>
+          <input type="radio" id="satisfied-yes" name="satisfied" value="yes">
+          <label for="satisfied-yes">Satisfied</label>
+          <input type="radio" id="satisfied-no" name="satisfied" value="no">
+          <label for="satisfied-no">Not Satisfied</label>
+          <input type="radio" id="satisfied-no" name="satisfied" value="no">
+        </fieldset>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+</main>
+
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 EnerFlow. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact Us</a>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">
+          <i class="fab fa-facebook-f social-icon"></i>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <i class="fab fa-twitter social-icon"></i>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in social-icon"></i>
+        </a>
+      </div>
+    </div>
+    <div class="editor-link">
+      <a href="PageEditor.html">Page Editor:Thiviru Igalawithana</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

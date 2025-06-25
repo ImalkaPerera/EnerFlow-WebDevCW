@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EnerFlow | Page Editor - Senesh Imalka</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Fonts: Inter for general text -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Link to external stylesheet for global styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Favicon for browser tab icon -->
+  <link rel="icon" href="https://placehold.co/32x32/0a73b7/ffffff?text=EF" type="image/x-icon">
+  <style>
+    /* Page-specific styles for the editor page, adapted for style.css */
+    .main-content-section .card {
+      text-align: left;
+      margin-bottom: 2rem;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .card h3 {
+      font-size: 1.8rem;
+      color: #0369a1; /* Matched from style.css */
+      margin-bottom: 1rem;
+      font-weight: 700;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 0.5rem;
+      width: 100%;
+    }
+    .card h4 {
+        font-size: 1.2rem;
+        color: #0284c7; /* Matched from style.css */
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+    .card p, .card ul {
+      line-height: 1.6;
+      color: #333;
+      flex-grow: 0;
+      font-size: 1rem;
+    }
+    .card ul {
+      list-style-position: inside;
+      padding-left: 1rem;
+    }
+    .card li {
+      margin-bottom: 0.5rem;
+    }
+    .card a {
+        color: #0284c7; /* Matched from style.css */
+        text-decoration: underline;
+        font-weight: 600;
+    }
+    .card a:hover {
+        color: #22d3ee;
+    }
+    .card code {
+      background-color: #e2e8f0; /* Matched from body background */
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', Courier, monospace;
+      color: #d946ef;
+    }
+    .compliance-box {
+        background-color: #e8f5e9;
+        border-left: 5px solid #4caf50;
+        padding: 1rem;
+        margin-top: 1.5rem;
+        border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="https://placehold.co/40x40/0a73b7/ffffff?text=EF" alt="EnerFlow Logo" height="40"> 
+    <h1>EnerFlow</h1>
+  </div>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="table.html">Table</a>
+    <a href="profile.html">Profile</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="sitemap.html">Sitemap</a>
+    <a href="team.html">Team</a>
+  </nav>
+</header>
+
+<main>
+  <section class="container main-content-section" style="padding-top: 2rem;">
+    <h2 class="section-title">
+      <i class="fa-solid fa-user-pen"></i> Page Editor
+    </h2>
+    <p style="text-align: center; color: #4a5568; font-size: 1.1rem; max-width: 800px; margin: 0 auto 3rem;">
+      This page outlines the work and contributions of <strong>Student 2, Senesh Imalka</strong>, to the EnerFlow website project.
+    </p>
+
+    <div class="cards-grid" style="grid-template-columns: 1fr;">
+        <!-- Website Style & Navigation Section -->
+        <div class="card" id="style-nav">
+            <h3>Website Style & Navigation</h3>
+            <h4>Technical Description</h4>
+            <p>As Student 2, my primary responsibility was to establish a consistent visual identity for the entire website. This involved creating a shared template, a global CSS file, and a responsive navigation bar.</p>
+            <ul>
+                <li><strong>Template Structure:</strong> I designed a common HTML template (`template.html`) with a `<header>`, `<main>`, and `<footer>` section. This ensures all pages share the same basic layout, including the EnerFlow logo and the main navigation, promoting a unified user experience. A wrapper `div` with class <code>.container</code> was used to center content and maintain clean margins.</li>
+                <li><strong>Global CSS:</strong> A single external stylesheet, <code>style.css</code>, was created to define global styles. This includes the color palette (primary blue <code>#0a73b7</code>), typography (Inter font from Google Fonts), button styles, and footer design. Using a global CSS file ensures that changes can be made in one place and reflected across the entire site, adhering to the DRY (Don't Repeat Yourself) principle.</li>
+                <li><strong>Navigation Bar:</strong> The navigation bar is fixed to the top using <code>position: fixed;</code>, so it remains accessible while the user scrolls. A hover effect was added to links for better interactivity, and a class <code>.active</code> will be used to highlight the current page. The navigation is fully responsive, adapting to different screen sizes.</li>
+            </ul>
+            <h4>Challenges and Lessons Learned</h4>
+            <p>A key challenge was deciding on a style that all team members agreed upon and that fit the theme of UN Sustainable Development Goals. We overcame this through collaborative design sessions. I learned the importance of creating a scalable and maintainable CSS architecture from the start.
+            </p>
+        </div>
+
+        <!-- Home Page Section -->
+        <div class="card" id="home-page">
+            <h3>Home Page</h3>
+            <h4>Technical Description</h4>
+            <p>The Home Page (`home.html`) serves as the main entry point to our website. The design is clean and focuses on guiding the user to the core content of the site.</p>
+            <ul>
+                <li><strong>Layout:</strong> I used CSS Flexbox to create a flexible and responsive layout for the content sections. The main feature is a grid of interactive cards that link to the four main content pages.</li>
+                <li><strong>Interactive Cards:</strong> Each card was built using a `<div>` element and styled with CSS. On hover, a <code>transform: scale(1.05);</code> effect is applied with a smooth <code>transition</code>, providing visual feedback to the user. This makes the page more engaging. Each card contains an image relevant to the content page it links to.</li>
+                <li><strong>Links:</strong> Links to the four content pages created by each student are included. I ensured the paths are correct for seamless navigation. These links open in the same tab to keep the user within the site's flow.</li>
+            </ul>
+             <a href="home.html" target="_blank">View Home Page</a> | <a href="validation_ST2.html#home-validation" target="_blank">View Validation Report</a>
+        </div>
+        
+        <!-- Table Page Section -->
+        <div class="card" id="table-page">
+            <h3>Table Page</h3>
+            <h4>Technical Description</h4>
+            <p>The Table Page (`table.html`) presents data relevant to our chosen UN Goal in a structured and visually appealing format. The table is fully styled with CSS and includes several required features.</p>
+            <ul>
+                <li><strong>Structure:</strong> A standard HTML `<table>` was used with `<thead>`, `<tbody>`, and `<tfoot>`. I used `colspan` to merge cells in the header for a more complex and professional layout.</li>
+                <li><strong>Styling:</strong> "Zebra striping" was implemented using the <code>:nth-child(even)</code> CSS pseudo-class to make rows easier to read. The table has a subtle `box-shadow` to make it stand out from the page background.</li>
+                <li><strong>Interactivity & Content:</strong> The table includes the website logo, thumbnail images in the headers, and icons (using Font Awesome) within cells to visually convey information. A hover effect on rows highlights the data the user is pointing to.</li>
+            </ul>
+             <a href="table.html" target="_blank">View Table Page</a> | <a href="validation_ST2.html#table-validation" target="_blank">View Validation Report</a>
+        </div>
+
+        <!-- Content Page Section -->
+        <div class="card" id="content-page">
+            <h3>Content Page</h3>
+            <h4>Technical Description</h4>
+            <p>I created an additional content page (`content_ST2.html`) to provide more in-depth information on a specific topic related to our chosen UN goal. The page is designed for readability and easy navigation.</p>
+            <ul>
+                <li><strong>Internal Navigation:</strong> For this long-form content page, I implemented an internal "table of contents" at the top with anchor links (e.g., `<a href="#section1">`) pointing to different sections of the page. This improves user experience on content-heavy pages.</li>
+                <li><strong>"Go to Top" Button:</strong> A "Go to Top" link is fixed to the bottom-right of the screen using <code>position: fixed;</code>. It links back to the top of the page (`#top`), allowing users to return to the start without excessive scrolling.</li>
+                <li><strong>Semantic HTML:</strong> I used semantic tags like `<article>`, `<section>`, and `<figure>` to structure the content, which improves both SEO and accessibility.</li>
+            </ul>
+            <a href="content_ST2.html" target="_blank">View Content Page</a> | <a href="validation_ST2.html#content-validation" target="_blank">View Validation Report</a>
+        </div>
+        
+        <!-- Compliance and Accessibility -->
+        <div class="card" id="compliance">
+            <h3>Accessibility & Compliance</h3>
+            <h4>Accessibility</h4>
+            <p>Throughout the development of my assigned pages, I focused on ensuring they were accessible. Key measures include:
+                <ul>
+                    <li>Using semantic HTML to give structure and meaning to the content.</li>
+                    <li>Providing `alt` text for all images to describe their content to screen readers.</li>
+                    <li>Ensuring high contrast between text and background colors for readability.</li>
+                    <li>Making interactive elements like links and buttons focusable for keyboard navigation.</li>
+                </ul>
+            </p>
+            <h4>Compliance with Janet Regulations</h4>
+            <div class="compliance-box">
+                <p>I have ensured that all pages I created comply with the Janet (Joint Academic NETwork) Acceptable Use Policy. The content is purely for educational purposes as part of this university coursework. No copyrighted material has been used without permission or proper citation, and the website does not contain any commercial advertising, offensive, or illegal material. The site's code is secure and does not pose a threat to the network.</p>
+            </div>
+        </div>
+        
+        <!-- References -->
+        <div class="card" id="references">
+            <h3>References</h3>
+            <p>The following resources were consulted during the development process:</p>
+            <ul>
+                <li>Module lecture notes and tutorial materials provided on Blackboard.</li>
+                <li>MDN Web Docs (developer.mozilla.org) for HTML and CSS reference.</li>
+                <li>W3Schools (w3schools.com) for CSS examples and interactive learning.</li>
+                <li>Font Awesome (fontawesome.com) for icons.</li>
+                <li>Google Fonts (fonts.google.com) for the 'Inter' typeface.</li>
+            </ul>
+        </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 EnerFlow. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact Us</a>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">
+          <i class="fab fa-facebook-f social-icon"></i>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <i class="fab fa-twitter social-icon"></i>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in social-icon"></i>
+        </a>
+      </div>
+    </div>
+    <div class="editor-link">
+      <a href="pageEditor_ST2.html">Page Editor: Senesh Imalka</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

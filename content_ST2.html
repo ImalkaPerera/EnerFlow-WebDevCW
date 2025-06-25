@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EnerFlow | Harnessing Solar Energy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Fonts: Inter for general text -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Link to external stylesheet for global styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Favicon for browser tab icon -->
+  <link rel="icon" href="https://placehold.co/32x32/0a73b7/ffffff?text=EF" type="image/x-icon">
+  <style>
+    /* Page-specific CSS for the content page */
+    .content-article {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .content-article h2, .content-article h3 {
+        color: #075a91;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #e2e8f0;
+    }
+    .content-article p {
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+        color: #4a5568;
+    }
+    .content-article img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        display: block;
+        margin: 2rem auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        border: 1px solid #ddd;
+    }
+
+    /* Internal Navigation Menu */
+    .internal-nav {
+        background-color: #f8f9fa;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .internal-nav a {
+        color: #0369a1;
+        text-decoration: none;
+        font-weight: 600;
+        margin: 0 1rem;
+        transition: color 0.3s ease;
+    }
+    .internal-nav a:hover {
+        color: #22d3ee;
+    }
+
+    /* "Go to Top" Button */
+    .go-to-top {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        background-color: #0a73b7;
+        color: white;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        font-size: 1.5rem;
+        border-radius: 50%;
+        text-decoration: none;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        transition: background-color 0.3s, transform 0.3s;
+        z-index: 1001;
+    }
+    .go-to-top:hover {
+        background-color: #075a91;
+        transform: translateY(-5px);
+    }
+    
+    .content-image-left {
+        float: left;
+        margin-right: 2rem;
+        margin-top: 0;
+        max-width: 350px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Go to Top Button -->
+<a href="#" class="go-to-top" aria-label="Go to top of page">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+<header>
+  <div class="logo-container">
+    <img src="https://placehold.co/40x40/0a73b7/ffffff?text=EF" alt="EnerFlow Logo" height="40"> 
+    <h1>EnerFlow</h1>
+  </div>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="table.html">Table</a>
+    <a href="profile.html">Profile</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="sitemap.html">Sitemap</a>
+    <a href="team.html">Team</a>
+  </nav>
+</header>
+
+<main>
+  <section class="container main-content-section">
+    <h2 class="section-title">
+      <i class="fas fa-sun"></i> Harnessing Solar Energy
+    </h2>
+    
+    <article class="content-article">
+      <!-- Internal Navigation Menu -->
+      <nav class="internal-nav" aria-label="Page Sections">
+        <a href="#introduction">Introduction</a>
+        <a href="#how-pv-works">How PV Cells Work</a>
+        <a href="#solar-tech">Types of Solar Tech</a>
+        <a href="#benefits">Benefits & Future</a>
+      </nav>
+
+      <!-- Section 1: Introduction -->
+      <section id="introduction">
+        <h2>The Dawn of a Solar Age</h2>
+        <p>Solar energy is the most abundant of all energy resources on earth. Sourced directly from the sun's radiation, it represents a limitless wellspring of clean power. As the world pivots towards sustainability and strives to meet UN Sustainable Development Goal 7, solar power has emerged as a leading solution. It offers a path to decarbonize our energy systems, reduce our reliance on fossil fuels, and empower communities with clean, affordable electricity.</p>
+        <p>From residential rooftops to massive utility-scale solar farms, the applications of solar technology are diverse and ever-expanding. This page explores the fundamentals of solar energy, the technologies that capture it, and its profound benefits for our planet.</p>
+        <img src="https://placehold.co/800x400/f39c12/ffffff?text=Vast+Solar+Farm" alt="A large solar farm with rows of panels under a clear blue sky.">
+      </section>
+
+      <!-- Section 2: How Photovoltaic (PV) Cells Work -->
+      <section id="how-pv-works">
+        <h2>How Photovoltaic (PV) Cells Work</h2>
+        <img src="https://placehold.co/600x600/34495e/ffffff?text=PV+Cell+Diagram" alt="A diagram illustrating how a photovoltaic cell converts sunlight into electricity." class="content-image-left">
+        <p>The magic of solar power lies in the photovoltaic (PV) effect. Solar panels are composed of many smaller units called solar cells, which are typically made from silicon, a semiconductor. When sunlight, which is made of tiny particles called photons, strikes a solar cell, it knocks electrons loose from their atoms.</p>
+        <h3>The Process:</h3>
+        <p>These free electrons are directed into a current by the electric field built into the cell's structure. This flow of electrons constitutes an electric current, which can be captured and transferred. This direct current (DC) is then passed through an inverter, which converts it into alternating current (AC) — the type of electricity used to power our homes and businesses.</p>
+        <p>By connecting multiple solar panels, we can create a solar array capable of generating significant amounts of electricity, all without any moving parts or harmful emissions.</p>
+      </section>
+
+      <!-- Section 3: Types of Solar Technology -->
+      <section id="solar-tech">
+        <h2>Types of Solar Technology</h2>
+        <p>While photovoltaic panels are the most common, solar technology encompasses several different methods for harnessing the sun's energy.</p>
+        <ul>
+          <li><strong>Photovoltaics (PV):</strong> As described above, these directly convert sunlight into electricity and are used in everything from small-scale residential systems to large solar farms.</li>
+          <li><strong>Concentrated Solar Power (CSP):</strong> This technology uses mirrors to concentrate the sun's energy to drive traditional steam turbines or engines that create electricity. It is primarily used in very large, utility-scale power plants.</li>
+          <li><strong>Solar Heating & Cooling (SHC):</strong> This method involves capturing thermal energy from the sun to heat water and air for residential, commercial, and industrial use.</li>
+        </ul>
+        <img src="https://placehold.co/800x400/16a085/ffffff?text=Residential+Rooftop+Panels" alt="Solar panels installed on the roof of a modern suburban house.">
+        <img src="https://placehold.co/800x400/c0392b/ffffff?text=Concentrated+Solar+Power+Plant" alt="A concentrated solar power plant with a central tower and a field of mirrors.">
+      </section>
+      
+      <!-- Section 4: Benefits and Future -->
+      <section id="benefits">
+        <h2>Benefits and the Bright Future of Solar</h2>
+        <p>The advantages of solar power are compelling. It is a completely renewable resource that reduces carbon footprints, improves public health by reducing air pollution, and leads to long-term energy savings. The solar industry is also a major economic driver, creating jobs in manufacturing, installation, and research.</p>
+        <p>The future of solar is even more exciting. Ongoing research is leading to more efficient, flexible, and even transparent solar cells. Coupled with advances in battery storage, solar power is becoming a reliable, 24/7 energy source. As costs continue to fall and technology improves, solar energy will be central to creating a sustainable and equitable energy system for the entire world.</p>
+        <img src="https://placehold.co/800x400/2980b9/ffffff?text=Futuristic+Solar+City" alt="An artist's impression of a futuristic city powered entirely by solar energy.">
+      </section>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 EnerFlow. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact Us</a>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">
+          <i class="fab fa-facebook-f social-icon"></i>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <i class="fab fa-twitter social-icon"></i>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in social-icon"></i>
+        </a>
+      </div>
+    </div>
+    <div class="editor-link">
+      <!-- Link for Student 1's Page Editor -->
+      <a href="pageEditor_ST1.html">Page Editor: Student 1</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+bn

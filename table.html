@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EnerFlow | Renewable Energy Analysis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Fonts: Inter for general text -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Link to external stylesheet for global styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Favicon for browser tab icon -->
+  <link rel="icon" href="https://placehold.co/32x32/0a73b7/ffffff?text=EF" type="image/x-icon">
+  <style>
+    /*
+      Page-specific CSS styles for the regenerated table page.
+    */
+    .main-content-section {
+        padding: 3rem 1rem;
+    }
+
+    .analysis-table {
+        width: 100%;
+        max-width: 1200px;
+        margin: 2rem auto;
+        border-collapse: separate; /* Use separate for spacing */
+        border-spacing: 0;
+        background-color: #ffffff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e2e8f0;
+    }
+
+    /* Table header styling */
+    .analysis-table thead th {
+        background: linear-gradient(135deg, #075a91, #0a73b7);
+        color: #ffffff;
+        padding: 1.25rem;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* Main header with logo */
+    .table-main-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .table-logo {
+        height: 45px;
+        width: 45px;
+    }
+
+    /* Second header with thumbnails */
+    .category-header th {
+        background-color: #f8f9fa;
+        color: #343a40;
+        position: relative;
+        padding: 1rem;
+        border-bottom: 2px solid #dee2e6;
+    }
+    
+    .category-header .thumbnail {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 4px;
+        background: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .category-header th:hover .thumbnail {
+        transform: scale(1.15);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    
+    /* Tooltip styling */
+    .category-header .tooltip {
+        visibility: hidden;
+        width: 140px;
+        background-color: #343a40;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px;
+        position: absolute;
+        z-index: 1;
+        bottom: 120%;
+        left: 50%;
+        margin-left: -70px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+
+    .category-header th:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* Table body styling */
+    .analysis-table tbody td {
+        padding: 1.5rem;
+        text-align: center;
+        color: #495057;
+        border-bottom: 1px solid #e9ecef;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+    
+    .analysis-table tbody tr:last-child td {
+        border-bottom: none;
+    }
+    
+    /* Using alternating column colors */
+    .analysis-table td:nth-child(2), .analysis-table td:nth-child(4) {
+         background-color: #fdfdfd;
+    }
+    
+    .analysis-table tbody tr:hover td {
+        background-color: #e9f5ff;
+    }
+    
+    /* Styling for the first column (rowspan cells) */
+    .energy-source-cell {
+        background-color: #eaf6ff !important;
+        font-weight: 700;
+        color: #075a91;
+        vertical-align: middle;
+        font-size: 1.1rem;
+        border-right: 2px solid #dee2e6;
+    }
+    
+    .metric-cell {
+        font-weight: 600;
+        text-align: left;
+    }
+    
+    /* Styling for icons */
+    .fa-leaf, .fa-sun, .fa-wind, .fa-water {
+      margin-right: 10px;
+      color: #0a73b7;
+    }
+    
+    .tick-icon {
+        color: #28a745; /* Green for positive */
+        font-size: 1.3rem;
+    }
+
+    /* Details link */
+    .details-link {
+        font-weight: 600;
+        color: #007bff;
+        text-decoration: none;
+        position: relative;
+    }
+    .details-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #007bff;
+        transition: width 0.3s ease;
+    }
+    .details-link:hover::after {
+        width: 100%;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .analysis-table {
+            font-size: 0.85rem;
+        }
+        .analysis-table thead th, .analysis-table tbody td {
+            padding: 0.8rem;
+        }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="https://placehold.co/40x40/0a73b7/ffffff?text=EF" alt="EnerFlow Logo" height="40"> 
+    <h1>EnerFlow</h1>
+  </div>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="table.html" class="active">Table</a>
+    <a href="profile.html">Profile</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="sitemap.html">Sitemap</a>
+    <a href="team.html">Team</a>
+  </nav>
+</header>
+
+<main>
+  <section class="container main-content-section">
+    <h2 class="section-title">
+      <i class="fas fa-balance-scale"></i> Renewable Energy Source Analysis
+    </h2>
+    <p style="text-align: center; color: #607d8b; font-size: 1.1rem; max-width: 800px; margin: 0 auto 2rem;">
+      A detailed analysis comparing different renewable energy sources based on cost, efficiency, and environmental impact.
+    </p>
+
+    <!-- The regenerated table with rowspan and colspan -->
+    <table class="analysis-table" aria-label="Analysis of Renewable Energy Sources">
+      <thead>
+        <tr>
+          <th colspan="4">
+            <div class="table-main-header">
+              <img src="https://placehold.co/60x60/ffffff/0a73b7?text=E" alt="EnerFlow Logo in Table" class="table-logo">
+              <span>Comprehensive Energy Comparison</span>
+            </div>
+          </th>
+        </tr>
+        <tr class="category-header">
+          <th aria-label="Energy Source">
+            <img src="https://placehold.co/80x80/28a745/ffffff?text=Type" alt="Energy Type Icon" class="thumbnail">
+            <span class="tooltip">Energy Source</span>
+          </th>
+          <th aria-label="Evaluation Metric">
+            <img src="https://placehold.co/80x80/ffc107/ffffff?text=Metric" alt="Metric Icon" class="thumbnail">
+             <span class="tooltip">Evaluation Metric</span>
+          </th>
+          <th aria-label="Data and Values">
+             <img src="https://placehold.co/80x80/17a2b8/ffffff?text=Data" alt="Data Icon" class="thumbnail">
+             <span class="tooltip">Data / Values</span>
+          </th>
+          <th aria-label="Further Details">
+            <img src="https://placehold.co/80x80/dc3545/ffffff?text=Link" alt="Link Icon" class="thumbnail">
+            <span class="tooltip">More Details</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Solar Power Section -->
+        <tr>
+          <td rowspan="3" class="energy-source-cell"><i class="fas fa-sun"></i>Solar Power</td>
+          <td class="metric-cell">Avg. Cost ($/MWh)</td>
+          <td>$30 - $45</td>
+          <td rowspan="3" style="vertical-align: middle;"><a href="content_ST2.html#solar" class="details-link" aria-label="Learn more about Solar Power">See Details</a></td>
+        </tr>
+        <tr>
+          <td class="metric-cell">Efficiency</td>
+          <td>18% - 23%</td>
+        </tr>
+        <tr>
+          <td class="metric-cell">High Land Use</td>
+          <td><i class="fas fa-check-circle tick-icon" aria-label="Yes"></i></td>
+        </tr>
+        <!-- Wind Power Section -->
+        <tr>
+          <td rowspan="3" class="energy-source-cell"><i class="fas fa-wind"></i>Wind Power</td>
+          <td class="metric-cell">Avg. Cost ($/MWh)</td>
+          <td>$25 - $50</td>
+          <td rowspan="3" style="vertical-align: middle;"><a href="content_ST2.html#wind" class="details-link" aria-label="Learn more about Wind Power">See Details</a></td>
+        </tr>
+        <tr>
+          <td class="metric-cell">Efficiency</td>
+          <td>35% - 45%</td>
+        </tr>
+        <tr>
+          <td class="metric-cell">High Land Use</td>
+          <td><i class="fas fa-check-circle tick-icon" aria-label="Yes"></i></td>
+        </tr>
+        <!-- Hydropower Section -->
+        <tr>
+          <td rowspan="3" class="energy-source-cell"><i class="fas fa-water"></i>Hydropower</td>
+          <td class="metric-cell">Avg. Cost ($/MWh)</td>
+          <td>$50 - $80</td>
+           <td rowspan="3" style="vertical-align: middle;"><a href="content_ST2.html#hydro" class="details-link" aria-label="Learn more about Hydropower">See Details</a></td>
+        </tr>
+         <tr>
+          <td class="metric-cell">Efficiency</td>
+          <td>~90%</td>
+        </tr>
+        <tr>
+          <td class="metric-cell">High Land Use</td>
+          <td><i class="fas fa-check-circle tick-icon" aria-label="Yes"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 EnerFlow. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact Us</a>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">
+          <i class="fab fa-facebook-f social-icon"></i>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <i class="fab fa-twitter social-icon"></i>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in social-icon"></i>
+        </a>
+      </div>
+    </div>
+    <div class="editor-link">
+      <a href="pageEditor_ST2.html">Page Editor: Student 2</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

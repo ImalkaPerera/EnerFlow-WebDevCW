@@ -1,94 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="refresh" content="6; url=home.html">
-		<title>Splash Screen</title>
-		<style>
-			body {
-				background-image: url('Splashbg.jpg');
-				background-size: cover;
-				background-repeat: no-repeat;
-				background-position: center center;
-				height: 100vh;
-				margin: 0;
-			}
-			
-			img {
-				margin-bottom: 10px;
-				margin-left:auto;
-				margin-right: auto;
-				width: 350px;
-				height: 200px;
-			}
-			
-			.container {
-				background: rgba(0, 0, 0, 0.6);
-				max-width: 100vh;
-				margin: 0 auto;
-				padding: 0 1.5rem;
-				
-			}
-			
-			.name {
-				margin-top: auto;
-				margin-bottom: 0 auto;
-				font-size: 60px;
-				font-family: Agency FB;
-				color: #D6D646;
-			}
-			
-			.theme {
-				line-height: 1.0;
-				font-size: 40px;
-				font-family: Bodoni MT Condensed;
-				color: #D6D646;
-			}
-			
-			.members {
-				color: #D6D646;
-				font-family: Bahnschrift SemiBold Condensed;
-			}
-			
-			.loader {
-				border: 4px solid #f3f3f3;
-				border-top: 4px solid gray;
-				border-radius: 50%;
-				width: 40px;
-				height: 40px;
-				animation: spin 1s linear infinite;
-				margin: 40px auto;
-			}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="7; url=home.html">
+    <title>Splash Screen</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+		display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(vivid-blurred-colorful-wallpaper-background_58702-3798.avif);
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: "Quicksand", sans-serif;
+        animation: fadeOut 7s forwards;
+      }
+      @keyframes fadeOut {
+        0%,85% {opacity: 1;}
+        100% {opacity: 0;}
+      }
+      .container {
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
+        padding: 2.5rem;
+        text-align: center;
+        width: 90%;
+        max-width: 650px;
+      }
 
-			@keyframes spin {
-				0% { transform: rotate(0deg); }
-				100% { transform: rotate(360deg); }
-			}
-			
-			.madeby {
-				color: #D6D646;
-				text-align: center;
-				padding-bottom: 20px;
-			}
-			
-			a {
-				color: #D6D646;
-			}
-		</style>
-	</head>
-	<body>
-	<div class = "container">
-		<center><img src="officiallogo.png" alt="Logo"><center>
-		<p class = "name"><b><u>EnerFlow</u></b></p>
-		<p class = "theme">Ignite your potential with seamless energy and unstoppable flow</p>
-		<p class = "members"><u><b>Group Members</b></u><br><br>
-				Yasitha Peiris<br>
-				Senesh Imalka<br>
-				Thiviru Igalawithana<br>
-				Shavini Fernando<br>
-		</p><br>
-		<div class="loader"></div><br>
-		<p class="madeby">(Made by : <a href="Yasitha.html" target="_blank">Yasitha Peiris</a>)</p>
-	</div>
-	</body>
+      img {
+        width: 160px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      .name {
+        font-family: "Orbitron", sans-serif;
+        font-size: 48px;
+        color: #0077cc;
+        margin-bottom: 16px;
+      }
+
+      .theme {
+        line-height: 1.4;
+        font-size: 22px;
+        color: #004d80;
+        margin-bottom: 25px;
+      }
+
+      .loader {
+        border: 6px solid #e0f7ff;
+        border-top: 6px solid #0077cc;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        margin: 10px auto 25px;
+      }
+
+      @keyframes spin {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(360deg);}
+      }
+
+      .madeby {
+        font-size: 14px;
+        color: #004d80;
+      }
+      .madeby a:hover {
+        color: #005299;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/officiallogo.png" alt="Logo" />
+      <p class="name">
+        <b><u>EnerFlow</u></b>
+      </p>
+      <p class="theme">
+        Ignite your potential with seamless energy and unstoppable flow
+      </p>
+      <p class="members">
+        <u><b>Group Members</b></u
+        ><br /><br />
+        Yasitha Peiris<br />
+        Senesh Imalka<br />
+        Thiviru Igalawithana<br />
+        Shavini Fernando<br />
+      </p>
+      <br />
+      <div class="loader"></div>
+      <br />
+      <p class="madeby">
+        (Made by : <a href="Yasitha.html" target="_blank">Yasitha Peiris</a>)
+      </p>
+    </div>
+  </body>
 </html>

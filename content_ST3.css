@@ -1,0 +1,152 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.85);
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.heading {
+    color: #0369a1;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color:#075a91;
+    margin: 25px 0 15px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+div p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #34495e;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.top-link {
+    display: block;
+    text-align: right;
+    margin-top: 30px;
+}
+
+.top-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.top-link a:hover {
+    text-decoration: underline;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+
+.components-container {
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.components-list {
+    flex: 1;
+}
+
+.components-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.components-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.wind2{
+    flex: 1;
+    display: flex;
+    align-items: left;
+}
+.wind2 img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.section-buttons {
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+}
+
+.section-buttons a {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.section-buttons a:hover {
+    color: #2980b9;
+}
+.go-to-top{
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #075a91;
+      padding: 12px 18px;
+      border-radius: 5px;
+      font-size: 14px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+}

@@ -71,18 +71,28 @@ input,textarea,select{
   color: #ffd700;
   transform: scale(1.2);
 }
-button{
-    padding: 10px 25px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 1em;
+#submit,#reset{
+    width: 120px; /* smaller width */
+    padding: 8px;
+    margin: 5px 0;
+    font-size: 14px;
+    text-align: center;
 }
-button[type="submit"] {
+#submit{
     background: #1e3c72;
     color: white;
+    border-radius: 4px;
 }
-button[type="submit"]:hover{
+#submit:hover{
     background: #ffd700;
     color: #1e3c72;
+}
+#reset{
+    background-color: #f1f1f1;
+    color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+#reset:hover{
+    background: #ff0b0b;
 }

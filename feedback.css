@@ -1,4 +1,4 @@
-/* body{
+body{
     background: linear-gradient(135eg,#1e3c72,#2a5298);
     background-color: #e2e8f0;
     font-family: 'Segeo UI',Arial, sans-serif;
@@ -7,9 +7,8 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    
     align-items: flex-start;
-} */
+}
 h1{
     text-align: center;
     color:rgb(0, 0, 0);
@@ -64,13 +63,13 @@ input,textarea,select{
     color: #ccc;
     cursor: pointer;
     transition: 0.3s;
-    cursor: pointer;
 }
 .star:hover,
 .star:hover ~ .star {
   color: #ffd700;
   transform: scale(1.2);
 }
+
 #submit,#reset{
     width: 120px; /* smaller width */
     padding: 8px;

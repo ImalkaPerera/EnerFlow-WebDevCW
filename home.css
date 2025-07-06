@@ -96,6 +96,12 @@
     position: relative;
     z-index: 2;
 }
+.mission-image {
+    width: 60px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 15px;
+    vertical-align: middle;
+}
 
 .mission-content {
     max-width: 900px;

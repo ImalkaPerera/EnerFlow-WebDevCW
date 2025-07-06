@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>EnerFlow | Volunteer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- import google font inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for footer icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/officiallogo.png" type="image/x-icon">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9;
+            color: #334155;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .main-content-section {
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            margin-top: 20px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #0a73b7;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 800;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #1fd6d2, #0a73b7);
+            border-radius: 2px;
+        }
+
+        .event-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .event {
+            flex: 1 1 300px;
+            max-width: 350px;
+            box-shadow: 0 4px 8px rgba(3, 105, 161, 0.1);
+            text-align: center;
+            background-color: #f0f9ff;
+            padding: 1.5rem;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .event:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(3, 105, 161, 0.2);
+        }
+
+        .event img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .event-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0369a1;
+            margin-bottom: 0.5rem;
+        }
+
+        .event h2 {
+            font-size: 1rem;
+            color: #475569;
+            font-weight: normal;
+            flex-grow: 1;
+            margin-bottom: 2rem;
+        }
+
+        .button {
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+
+        .button1 {
+            background-color: white;
+            color: #0369a1;
+            border: 2px solid #0369a1;
+            align-self: center;
+        }
+
+        .button1:hover {
+            background-color: #0369a1;
+            color: white;
+        }
+
+        .feedback-form-wrapper {
+            width: 100%;
+            max-width: 42rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .feedback-form-card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            padding: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .feedback-form-card {
+                padding: 3rem;
+            }
+        }
+
+        .feedback-form-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .feedback-form-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .feedback-form-subtitle {
+            color: #64748b;
+            margin-top: 0.5rem;
+        }
+
+        .feedback-form-body>*:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+        .feedback-form-rating-legend {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #0369a1;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .feedback-form-rating-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .rating-emojis {
+            display: inline-flex;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .rating-emojis .emoji {
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            filter: grayscale(1);
+        }
+
+        .rating-emojis .emoji:hover {
+            transform: scale(1.2);
+            filter: grayscale(0);
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        .feedback-form-textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .feedback-form-textarea:focus {
+            border-color: #0ea5e9;
+            box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.4);
+            outline: none;
+        }
+
+        .feedback-form-buttons {
+            margin-top: 2.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .feedback-btn {
+            padding: 0.75rem 2rem;
+            width: 11rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 9999px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .feedback-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .feedback-btn-cancel {
+            color: #1f2937;
+            background-color: #e5e7eb;
+        }
+
+        .feedback-btn-cancel:hover {
+            background-color: #d1d5db;
+        }
+
+        .feedback-btn-submit {
+            color: #ffffff;
+            background-color: #0284c7;
+            box-shadow: 0 4px 14px 0 rgba(2, 132, 199, 0.39);
+        }
+
+        .feedback-btn-submit:hover {
+            background-color: #0369a1;
+        }
+
+        #topBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            transition: transform 0.3s ease;
+        }
+
+        #topBtn:hover {
+            transform: scale(1.1);
+        }
+
+        .topImg {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/officiallogo.png" alt="EnerFlow Logo" height="40">
+            <h1>EnerFlow</h1>
+        </div>
+        <nav>
+            <a href="home.html" >Home</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="table.html">Table</a>
+            <a href="sitemap.html">Sitemap</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="team.html">Team</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container main-content-section">
+            <h2 class="section-title">
+                Be a Volunteer
+            </h2>
+            <div class="event-content">
+                <div class="event">
+                    <img src="https://placehold.co/400x200/1fd6d2/ffffff?text=Community+Solar" class="product-img"
+                        alt="Solar Homes">
+                    <p class="event-title">Community Solar Installations</p>
+                    <h2>Volunteer to help install solar panels on public buildings like schools or community centers. It
+                        promotes clean energy use and lowers electricity costs for the community.</h2>
+                    <button class="button button1"
+                        onclick="document.getElementById('form').scrollIntoView({ behavior: 'smooth' });">Apply for this
+                        role</button>
+                </div>
+                <div class="event">
+                    <img src="https://placehold.co/400x200/1fd6d2/ffffff?text=Energy+Outreach" class="product-img"
+                        alt="energy save">
+                    <p class="event-title">Energy-Efficiency Outreach</p>
+                    <h2>Educate households about saving energy through simple changes like using LED bulbs or sealing
+                        windows. This helps reduce energy waste and carbon emissions.</h2>
+                    <button class="button button1"
+                        onclick="document.getElementById('form').scrollIntoView({ behavior: 'smooth' });">Apply for this
+                        role</button>
+                </div>
+                <div class="event">
+                    <img src="https://placehold.co/400x200/1fd6d2/ffffff?text=Advocacy" class="product-img"
+                        alt="Privacy Policy">
+                    <p class="event-title">Advocacy & Policy Support</p>
+                    <h2>Support clean energy laws by joining campaigns, writing letters or spreading awareness. This
+                        helps influence decision-makers to support renewable energy initiatives.</h2>
+                    <button class="button button1"
+                        onclick="document.getElementById('form').scrollIntoView({ behavior: 'smooth' });">Apply for this
+                        role</button>
+                </div>
+                <div class="event">
+                    <img src="https://placehold.co/400x200/1fd6d2/ffffff?text=Content+Creation" class="product-img"
+                        alt="Content create">
+                    <p class="event-title">Content Creators</p>
+                    <h2>Make videos, articles, or social media posts to inform and inspire people about clean energy
+                        sources like solar, wind, and hydro to raise awareness and encourage action.</h2>
+                    <button class="button button1"
+                        onclick="document.getElementById('form').scrollIntoView({ behavior: 'smooth' });">Apply for this
+                        role</button>
+                </div>
+            </div>
+
+            <div id="form" style="padding-top: 4rem;">
+                <div class="feedback-form-wrapper">
+                    <div class="feedback-form-card">
+                        <div class="feedback-form-header">
+                            <h1 class="feedback-form-title">Share Your Feedback</h1>
+                            <p class="feedback-form-subtitle">We'd love to hear about your experience!</p>
+                        </div>
+
+                        <form action="#" method="POST">
+                            <div class="feedback-form-body">
+                                <fieldset>
+                                    <legend class="feedback-form-rating-legend">Your Rating</legend>
+                                    <div class="feedback-form-rating-container">
+                                        <div class="rating-emojis">
+                                            <span class="emoji" title="Terrible">😞</span>
+                                            <span class="emoji" title="Bad">😟</span>
+                                            <span class="emoji" title="Okay">😐</span>
+                                            <span class="emoji" title="Good">😊</span>
+                                            <span class="emoji" title="Great">🤩</span>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <div>
+                                    <label for="message" class="sr-only">Your Review</label>
+                                    <textarea id="message" name="message" rows="6" class="feedback-form-textarea"
+                                        placeholder="Write your review here..."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="feedback-form-buttons">
+                                <button type="reset" class="feedback-btn feedback-btn-cancel">
+                                    Cancel
+                                </button>
+                                <button type="submit" class="feedback-btn feedback-btn-submit">
+                                    Submit Feedback
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#top" id="topBtn">
+                <img src="https://placehold.co/40x40/0a73b7/ffffff?text=^" class="topImg" alt="Go To Top">
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content container">
+            <p>&copy; 2025 EnerFlow. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+                <a href="#">
+                    <i class="fab fa-facebook-f social-icon"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter social-icon"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-linkedin-in social-icon"></i>
+                </a>
+            </div>
+            <!-- Link to individual student's editor page as per coursework -->
+            <p class="editor-link">
+                <a href="page_editor_student_name.html">Page Editor:Imalka Perera</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

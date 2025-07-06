@@ -2,25 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wind Energy</title>
+    <title>EnerFlow | [Page Title Here]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Fonts: Inter for general text -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link to external stylesheet for global styles (assuming this file is named style.css) -->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Wind.css">
+    <!-- Favicon for browser tab icon -->
+    <link rel="icon" href="images/officiallogo.png" type="image/x-icon">
+
 </head>
 <body>
-    <div class="video-background">
-        <video autoplay muted loop>
-            <source src="wind.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
     
+    <header>
+        <div class="logo-container">
+            <img src="images/officiallogo.png" alt="EnerFlow Logo" height="40">
+            <h1>EnerFlow</h1>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="table.html">Table</a>
+            <a href="profile.html">Profile</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="sitemap.html">Sitemap</a>
+            <a href="team.html">Team</a>
+        </nav>
+    </header>
+
+    <div class="section-buttons">
+        <a href="#what-is">What is Wind Energy</a>
+        <a href="#components">Components</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#applications">Applications</a>
+      </div>
+
     <div class="content">
         <h1>Wind Energy</h1>
         
-        <h2>What is Wind Energy</h2>
+        <h2 id="what-is">What is Wind Energy</h2>
         <p>Wind energy is a form of renewable energy that harnesses the kinetic energy of the wind to generate electricity. It is one of the fastest-growing sources of renewable energy worldwide. Wind turbines, typically consisting of large blades mounted on a tower, capture the energy from the wind as it blows and convert it into rotational motion. This rotational motion drives a generator, which then produces electricity.</p>
         
-        <h2>Wind turbine components</h2>
+        <h2 id="components">Wind turbine components</h2>
         <!-- NEW: Components container with flex layout -->
         <div class="components-container">
             <div class="components-list">
@@ -36,11 +63,11 @@
             </div>
             <div class="components-image">
                 <!-- NEW: Added wind turbine components image -->
-                <img src="windturbine.jpg" alt="Wind Turbine Components Diagram">
+                <img src="/Upload/windturbine.jpg" alt="Wind Turbine Components Diagram">
             </div>
         </div>
         
-        <h2>How Wind Turbines Work</h2>
+        <h2 id="how-it-works">How Wind Turbines Work</h2>
         <p>Wind turbines work by converting the kinetic energy of wind into mechanical energy, which is then transformed into electricity.</p>
         <ul>
             <li><span class="highlight">Wind Capture:</span> Wind turbines are equipped with aerodynamic blades designed to capture the kinetic energy of the wind. When the wind blows, it causes the blades to rotate.</li>
@@ -51,9 +78,9 @@
         </ul>
         
         
-        <h2>Benefits of Wind Energy</h2>
+        <h2 id="benefits">Benefits of Wind Energy</h2>
         <div class="wind2">
-        <img src="wind2.jpg" alt="windpower">
+        <img src="/Upload/wind2.jpg" alt="windpower">
         
         <ul>
             <li><span class="highlight">Renewable Resource:</span> Wind is a virtually unlimited resource, making wind energy sustainable in the long term.</li>
@@ -64,7 +91,7 @@
         </ul>
         </div>
         
-        <h2>Applications of Wind Energy</h2>
+        <h2 id="applications">Applications of Wind Energy</h2>
         
         <h3>Shore Wind Farms</h3>
         <p>Large-scale wind farms are installed in suitable onshore locations to generate electricity for residential, commercial, and industrial use.</p>
@@ -81,9 +108,34 @@
         <h3>Hybrid Wind Systems</h3>
         <p>Wind energy is integrated into hybrid power systems alongside other renewable energy sources and storage technologies, ensuring reliable and continuous electricity supply for residential, commercial, and industrial applications.</p>
         
-        <div class="top-link">
-            <a href="#">Top</a>
-        </div>
+        <a href="#" class="go-to-top">Go to Top ↑</a>
     </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 EnerFlow. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f social-icon"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <i class="fab fa-twitter social-icon"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in social-icon"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="editor-link">
+                <a href="/Upload/pageEditor_ST3.html">Page Editor:Thiviru Igalawithana |</a>
+                <a href="/Upload/validation_ST3.html"> Validation Page</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

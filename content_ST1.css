@@ -1,0 +1,115 @@
+		html{
+            scroll-behavior: smooth;
+        }
+		
+        .section-title {
+            font-size: 2.5rem;
+            color: #0369a1;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 1rem;
+		}
+		
+        body {
+            font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e2e8f0;
+            scroll-behavior: smooth;
+
+        }
+		
+        main{
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        #nav
+         {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 2rem;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h2,h3{
+            color: #075a91;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+		
+        p{
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #4a5568;
+        }
+		
+        .image{
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            display: block;
+            margin: 1rem auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0,0, 0.15);
+        }
+
+        ul li {
+			padding-top: 5px;
+            padding-left: 10px;
+        }
+
+        .circle-list {
+			list-style-type: disc;
+			padding-left: 20px;
+		}
+
+
+        main nav {
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            margin: auto;
+            border: 8px;
+        }
+
+        main nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #075a91;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+
+        main nav a:hover,
+        main nav a.active {
+            color: white;
+            background-color: #075a91;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .go-to-top{
+		  position: fixed;
+		  bottom: 20px;
+		  right: 20px;
+		  background-color: #075a91;
+		  padding: 12px 18px;
+		  border-radius: 5px;
+		  font-size: 14px;
+		  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+		  transition: background-color 0.3s;
+		  color: white;
+		  text-decoration: none;
+		  font-weight: 600;
+		}

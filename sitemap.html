@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap - EnerFlow</title>
+    <!-- Google Fonts: Inter for general text -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link to Global Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/officiallogo.png" type="image/x-icon">
+    <style>
+        /* General page styling */
+       body{
+        background-color: #e2e8f0;
+       }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto 0 auto;
+            padding: 2rem;
+            /* background-color: #ffffff; */
+            /* border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); */
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            color: #0369a1; /* Reverted to original blue */
+            margin-top: 10px;
+            margin-bottom: 0;
+            font-weight: 700;
+        }
+        
+        .description {
+            margin-bottom: 3rem;
+            color: #656970;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* SVG Sitemap Styling */
+        .sitemap-svg {
+            width: 100%;
+            height: auto;
+            min-height: 800px; /* Adjust as needed */
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Styling for the connecting lines */
+        .sitemap-svg .line {
+            stroke: #9ca3af;
+            stroke-width: 2;
+            fill: none;
+        }
+        
+        /* Styling for the additional responsibility lines */
+        .sitemap-svg .responsibility-line {
+            stroke: #0ea5e9; /* Reverted to a lighter blue */
+            stroke-width: 1.5;
+            fill: none;
+            stroke-dasharray: 4, 4;
+        }
+
+
+        /* Styling for the nodes (rectangles) */
+        .sitemap-svg .node rect {
+            fill: #0284c7; /* Reverted to original medium blue */
+            stroke: #0369a1; /* Reverted to original dark blue */
+            stroke-width: 2;
+            
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Styling for the text within nodes */
+        .sitemap-svg .node text {
+            fill: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            text-anchor: middle;
+            dominant-baseline: middle;
+            pointer-events: none; /* Text should not block clicks on the rect */
+        }
+        
+        /* Specific styling for different levels to show hierarchy */
+        .sitemap-svg .node.level-1 rect { fill: #0369a1; } /* Darkest Blue */
+        .sitemap-svg .node.level-2 rect { fill: #0284c7; } /* Medium Blue */
+        .sitemap-svg .node.level-3 rect { fill: #0ea5e9; } /* Lighter Blue */
+        .sitemap-svg .node.level-4 rect { fill: #38bdf8; } /* Lightest Blue */
+
+
+        /* INTERACTIVITY: Hover effect for nodes */
+        .sitemap-svg .node:hover rect {
+            fill: #0369a1; /* Lighter, more vibrant blue on hover */
+            cursor: pointer; 
+        }
+
+        /* ACCESSIBILITY: Focus state for keyboard navigation */
+        .sitemap-svg .node:focus rect,
+        .sitemap-svg .node:focus-within rect {
+            outline: 3px solid #22d3ee; /* Reverted to cyan */
+            outline-offset: 3px;
+        }
+        
+        /* RESPONSIVENESS: Adjustments for smaller screens */
+        @media (max-width: 900px) {
+            .sitemap-svg {
+                min-height: 1000px; /* More vertical space */
+            }
+             .sitemap-svg .node text {
+                font-size: 12px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+             .sitemap-svg {
+                min-height: 1300px; /* Even more vertical space for mobile layout */
+            }
+            .section-title {
+                font-size: 2.2rem;
+            }
+            .description {
+                font-size: 1rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/officiallogo.png" alt="EnerFlow Logo" height="40">
+            <h1>EnerFlow</h1>
+        </div>
+        <nav>
+            <a href="home.html" >Home</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="table.html">Table</a>
+            <a href="sitemap.html"class="active">Sitemap</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="team.html">Team</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </header>
+    <h2 class="section-title">Website Sitemap</h2>
+    <main class="main-container">
+        <p class="description">An interactive visual guide to the structure of our website. Click on any page to navigate directly to it.</p>
+        
+        <!-- SVG Sitemap Implementation -->
+        <svg class="sitemap-svg" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet" aria-labelledby="sitemap-title" role="graphics-document">
+            <!-- ACCESSIBILITY: Title for the SVG content -->
+            <title id="sitemap-title">A hierarchical diagram of the EnerFlow website structure.</title>
+
+            <!-- Lines connecting the nodes -->
+            <g class="lines">
+                <!-- Level 1 to 2 -->
+                <path class="line" d="M 500 80 V 150" />
+                <path class="line" d="M 100 150 H 900" />
+                
+                <!-- Connectors to Level 2 nodes -->
+                <path class="line" d="M 100 150 V 180" />
+                <path class="line" d="M 260 150 V 180" />
+                <path class="line" d="M 420 150 V 180" />
+                <path class="line" d="M 580 150 V 180" />
+                <path class="line" d="M 740 150 V 180" />
+                <path class="line" d="M 900 150 V 180" />
+
+                <!-- Connector from Content Pages to its children -->
+                <path class="line" d="M 900 240 V 560" />
+
+                <!-- Connectors from L2 pages to L3 Editor pages -->
+                <path class="responsibility-line" d="M 100 240 V 415 H 505" /> <!-- Volunteer -> Editor S1 -->
+                <path class="responsibility-line" d="M 260 240 V 475 H 505" /> <!-- Table -> Editor S2 -->
+                <path class="responsibility-line" d="M 420 240 V 535 H 505" /> <!-- Feedback -> Editor S3 -->
+                <path class="responsibility-line" d="M 740 240 V 595 H 505" /> <!-- Profile -> Editor S4 -->
+                
+                <!-- Connector from Team to Editor Pages Heading -->
+                <path class="line" d="M 580 240 V 300" />
+                <!-- Connector from Editor Pages Heading to its children -->
+                <path class="line" d="M 580 360 V 560" />
+            </g>
+
+            <!-- Nodes for each page -->
+            <g class="nodes">
+                <!-- Level 1 -->
+                <a href="home.html" class="node level-1" aria-label="Go to Home Page" tabindex="0">
+                    <rect x="425" y="20" width="150" height="60" />
+                    <text x="500" y="50">Home Page</text>
+                </a>
+
+                <!-- Level 2 -->
+                <a href="volunteer.html" class="node level-2" aria-label="Go to Volunteer Page" tabindex="0">
+                    <rect x="25" y="180" width="150" height="60" />
+                    <text x="100" y="210">Volunteer</text>
+                </a>
+                <a href="table.html" class="node level-2" aria-label="Go to Table Page" tabindex="0">
+                    <rect x="185" y="180" width="150" height="60" />
+                    <text x="260" y="210">Table</text>
+                </a>
+                <a href="feedback.html" class="node level-2" aria-label="Go to Feedback Page" tabindex="0">
+                    <rect x="345" y="180" width="150" height="60" />
+                    <text x="420" y="210">Feedback</text>
+                </a>
+                 <a href="team.html" class="node level-2" aria-label="Go to Team Page" tabindex="0">
+                    <rect x="505" y="180" width="150" height="60" />
+                    <text x="580" y="210">Team</text>
+                </a>
+                <a href="profile.html" class="node level-2" aria-label="Go to Profile Page" tabindex="0">
+                    <rect x="665" y="180" width="150" height="60" />
+                    <text x="740" y="210">Profile</text>
+                </a>
+                <a href="content_ST1.html" class="node level-2" aria-label="Go to Content Pages" tabindex="0">
+                    <rect x="825" y="180" width="150" height="60" />
+                    <text x="900" y="210">Content Pages</text>
+                </a>
+                
+                <!-- Level 3 - Children of Content Pages -->
+                <g id="student-content-pages">
+                     <a href="content_ST1.html" class="node level-3" aria-label="Go to Content Page Student 1" tabindex="0">
+                        <rect x="825" y="330" width="150" height="50" />
+                        <text x="900" y="355">Content S1</text>
+                    </a>
+                     <a href="content_ST2.html" class="node level-3" aria-label="Go to Content Page Student 2" tabindex="0">
+                        <rect x="825" y="390" width="150" height="50" />
+                        <text x="900" y="415">Content S2</text>
+                    </a>
+                     <a href="content_ST3.html" class="node level-3" aria-label="Go to Content Page Student 3" tabindex="0">
+                        <rect x="825" y="450" width="150" height="50" />
+                        <text x="900" y="475">Content S3</text>
+                    </a>
+                     <a href="content_ST4.html" class="node level-3" aria-label="Go to Content Page Student 4" tabindex="0">
+                        <rect x="825" y="510" width="150" height="50" />
+                        <text x="900" y="535">Content S4</text>
+                    </a>
+                </g>
+
+                <!-- Level 3 - Editor Pages Heading -->
+                <a href="pageEditor_ST1.html" class="node level-3" aria-label="Go to Editor Pages" tabindex="0">
+                    <rect x="505" y="300" width="150" height="60" />
+                    <text x="580" y="330">Editor Pages</text>
+                </a>
+
+                <!-- Level 4 - Children of Editor Pages -->
+                <g id="student-editor-pages">
+                     <a href="pageEditor_ST1.html" class="node level-4" aria-label="Go to Editor Page Student 1" tabindex="0">
+                        <rect x="505" y="390" width="150" height="50" />
+                        <text x="580" y="415">Editor S1</text>
+                    </a>
+                     <a href="pageEditor_ST2.html" class="node level-4" aria-label="Go to Editor Page Student 2" tabindex="0">
+                        <rect x="505" y="450" width="150" height="50" />
+                        <text x="580" y="475">Editor S2</text>
+                    </a>
+                     <a href="pageEditor_ST3.html" class="node level-4" aria-label="Go to Editor Page Student 3" tabindex="0">
+                        <rect x="505" y="510" width="150" height="50" />
+                        <text x="580" y="535">Editor S3</text>
+                    </a>
+                     <a href="pageEditor_ST4.html" class="node level-4" aria-label="Go to Editor Page Student 4" tabindex="0">
+                        <rect x="505" y="570" width="150" height="50" />
+                        <text x="580" y="595">Editor S4</text>
+                    </a>
+                </g>
+            </g>
+        </svg>
+    </main>
+    <footer>
+        <div class="footer-content container">
+            <p>&copy; 2025 EnerFlow. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+                <a href="#">
+                    <i class="fab fa-facebook-f social-icon"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter social-icon"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-linkedin-in social-icon"></i>
+                </a>
+            </div>
+            <!-- Link to individual student's editor page as per coursework -->
+            <p class="editor-link">
+                <a href="page_editor_student_name.html">Page Editor:Imalka Perera</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

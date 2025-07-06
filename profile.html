@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+    <title>EnerFlow | Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- import google font inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for footer icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/officiallogo.png" type="image/x-icon">
+  <style>
+    body {
+      background-color: #f0f8ff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+    }
+
+    .profile-card {
+      width: 52.5%;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      box-shadow: 0 4px 12px rgba(red, green, blue, alpha);
+    }
+
+
+    .profile-card img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    .profile-card.text-content {
+      flex: 1;
+    }
+
+    .profile-card h2 {
+      margin: 10px 0 5px;
+      font-size: 1.6em;
+      color: #023e8a;
+
+    }
+
+    .profile-card title {
+      font-size: 1em;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .profile-card blockquote {
+      font-style: italic;
+      color: #333;
+      border-left: 4px solid #0077b6;
+      padding-left: 10px;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .cards {
+      align-items: center;
+      gap: 20px;
+      margin: 40px auto 0;
+      width: 52.5%;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      box-shadow: 0 2px 8px rgba(red, green, blue, alpha);
+    }
+
+    .card h2 {
+      font-size: 1.8em;
+      text-align: left;
+      color: #023e8a;
+      margin-bottom: 25px;
+    }
+
+    .skill-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .progress-bar {
+      background-color: #e0e0e0;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 20px;
+
+    }
+
+    .progress {
+      height: 100%;
+      color: white;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 20px;
+      font-size: 0.9em;
+      border-radius: 20px;
+    }
+
+    .p1 {
+      width: 90%;
+      background-color: #0077b6;
+    }
+
+    .p2 {
+      width: 83%;
+      background-color: #00b4b8;
+    }
+
+    .p3 {
+      width: 96%;
+      background-color: #48cae4;
+    }
+
+    .p4 {
+      width: 78%;
+      background-color: #90e0ef;
+    }
+
+    .cards01 {
+      align-items: center;
+      gap: 20px;
+      margin: 40px auto 0;
+      width: 52.5%;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      box-shadow: 0 2px 8px rgba(red, green, blue, alpha);
+    }
+
+    .cards01 h2 {
+      text-align: left;
+      color: #023e8a;
+      margin-bottom: 20px;
+    }
+
+    .goal {
+      display: inline-block;
+      background-color: #e0f7fa;
+      color: #00796b;
+      padding: 12px 20px;
+      margin-top: 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(red, green, blue, alpha);
+      transition: transform 0.2s ease;
+    }
+
+    .goal:hover {
+      transform: scale(1.5);
+    }
+
+    .g01 {
+      background-color: #fefae0;
+      color: #bc6c25;
+    }
+
+    .g02 {
+      background-color: #e0f7fa;
+      color: #00796b;
+    }
+
+    .g03 {
+      background-color: #f0f4c3;
+      color: #827717;
+    }
+
+    .g04 {
+      background-color: #ede7f6;
+      color: #5e35b1;
+    }
+
+    .g05 {
+      background-color: #fff3e0;
+      color: #ef6c00;
+    }
+
+    .g06 {
+      background-color: #e8f5e9;
+      color: #2e7d32
+    }
+
+    .cards02 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      margin: 40px auto 0;
+      width: 52.5%;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      box-shadow: 0 2px 8px rgba(red, green, blue, alpha);
+    }
+
+    .cards02 h2 {
+      font-size: 1.8em;
+      color: #023e8a;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+
+    .cards02 h3 {
+      font-size: 1.3em;
+      color: #00796b;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .cards02 ul {
+      padding-left: 20px;
+      padding-bottom: 5px;
+    }
+
+    .cards02 li {
+      margin-bottom: 5px;
+      line-height: 1;
+    }
+
+    .cards03 {
+      align-items: center;
+      gap: 20px;
+      margin: 40px auto 0;
+      width: 52.5%;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      box-shadow: 0 2px 8px rgba(red, green, blue, alpha);
+    }
+
+    .shedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    .shedule-table caption {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #023e8a;
+      font-weight: bold;
+    }
+
+    .shedule-table th,
+    .shedule-table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 14.28%;
+      height: 50px;
+    }
+
+    .shedule-table th {
+      background-color: #e0e0e0;
+    }
+
+    .shedule-table td.other-month {
+      background-color: #e0e0e0;
+    }
+
+    .shedule-table td[style="lightblue"] {
+      font-weight: bold;
+      color: #023e8a;
+    }
+
+    .cards04 {
+      width: 52.5%;
+      padding: 20px;
+      margin: auto;
+      margin-top: 40px;
+      background-color: #fff;
+      border-radius: 12px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      box-shadow: 0 2px 8px rgba(red, green, blue, alpha);
+    }
+
+    .cards04 h2 {
+      text-align: left;
+      margin-top: 20px;
+      color: #023e8a;
+    }
+
+    .cards04 ul {
+      list-style: none;
+      padding-left: 0%;
+    }
+
+    .cards04 li {
+      margin: 10px 0;
+      font-size: 1em;
+
+    }
+
+    .cards.form-card {
+      width: 50%;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .cards.form-card h2 {
+      text-align: center;
+      color: #023e8a;
+      margin-bottom: 20px;
+    }
+
+    .cards.form-card form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cards.form-card label {
+      margin: 10px 0 5px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .cards.form-card input,
+    .cards.form-card textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .cards.form-card textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .cards.form-card .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .cards.form-card button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      background-color: #0077b6;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .cards.form-card button:hover {
+      background-color: #023e8a;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/officiallogo.png" alt="EnerFlow Logo" height="40">
+      <h1>EnerFlow</h1>
+    </div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="table.html">Table</a>
+      <a href="sitemap.html">Sitemap</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="team.html">Team</a>
+      <a href="profile.html" class="active">Profile</a>
+    </nav>
+  </header>
+  <!-- profile card section -->
+  <main>
+    <section class="profile-card">
+      <img
+        src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcTekocgKZ9Lk8GeRM49r2EIu_e3d1KumJKXcUwGJNcmHNrCDzzd8VZXSU2_SXq0RmDkTgFYz2DuYGnEJp6uOSmQzTrKGPaSPY2X6HAHAOctAZ-QJAKfwZxTghv0wab7zKNnqCsYMpVayw"
+        alt="AV" width="100" height="100">
+      <h2>Ursula von der Leyen</h2>
+      <p class="title">President of the European Commission</p>
+      <blockquote>
+        "Driving Europe toward a climate-neutral future through innovation, policy, and global cooperation."
+      </blockquote>
+    </section>
+
+
+    <!-- skills section -->
+    <section class="cards">
+      <h2>Skills</h2>
+      <div class="skill">
+        <div class="skill-name">Renewable Energy Systems Design</div>
+        <div class="progress-bar">
+          <div class="progress p1">90%</div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">Energy Storage Technologies</div>
+        <div class="progress-bar">
+          <div class="progress p2">83%</div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">Energy Modeling & Simulation</div>
+        <div class="progress-bar">
+          <div class="progress p3">96%</div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">Smart Grid Technology</div>
+        <div class="progress-bar">
+          <div class="progress p4">78%</div>
+        </div>
+
+    </section>
+    <!-- Goals section -->
+    <section class="cards01">
+
+      <h2> Supporting Green Energy</h2>
+      <div class="goal g01">Renewable Energy Adoption</div>
+      <div class="goal g02">Solar Power</div>
+      <div class="goal g03">Wind Energy</div>
+      <div class="goal g04">Hydropower</div>
+      <div class="goal g05">Climate Action</div>
+      <div class="goal g06">Sustainable Living</div>
+
+    </section>
+    <!--Profile Details-->
+    <section class="cards02">
+      <div class="details">
+        <h2>Profile Details</h2>
+        <div class="section">
+          <h3>Goals</h3>
+          <ul>
+            <li>Increase community awareness and adoption of green energy solutions.</li>
+            <li>Contribute to policy recommendations for sustainable energy infrastructure.</li>
+            <li>Develop scalable models for integrating solar and wind energy in urban areas.</li>
+          </ul>
+        </div>
+        <div class="frustrations">
+          <h3>Frustrations</h3>
+          <ul>
+            <li>Limited funding for renewable energy initiatives.</li>
+            <li>Public misconceptions about the reliability of green energy sources.</li>
+            <li>Regulatory hurdles slowing down clean energy projects.</li>
+          </ul>
+        </div>
+        <div class="experience">
+          <h3>Experience</h3>
+          <ul>
+            <li>Conducted feasibility studies for solar and wind installations in rural areas.</li>
+            <li>Collaborated with local governments to draft clean energy transition plans.</li>
+            <li>Led workshops to educate residents on the benefits of renewable energy.
+            </li>
+          </ul>
+        </div>
+    </section>
+
+    <!-- shedule section -->
+    <section class="cards03">
+      <table class="shedule-table">
+        <caption>July 2025</caption>
+        <thead>
+          <th>Sun</th>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th>Sat</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="other-month"></td>
+            <td class="other-month"></td>
+            <td style='background-color:lightblue;'>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td style="background-color: lightblue;">5</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>14</td>
+            <td style="background-color: lightblue;">15</td>
+            <td style="background-color: lightblue;">16</td>
+            <td style="background-color: lightblue;">17</td>
+            <td>18</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td style="background-color: lightblue;">21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td style="background-color: lightblue;">26</td>
+          </tr>
+          <tr>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+            <td style="background-color: lightblue;">30</td>
+            <td style="background-color: lightblue;">31</td>
+            <td class="other-month"></td>
+            <td class="other-month"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <!-- Volunteering Section -->
+    <section class="cards04">
+      <h2>Volunteering Activities</h2>
+      <ul>
+        <li><span class="icon" title="Tree Planting">🌱</span> Tree Planting</li>
+        <li><span class="icon" title="Coastal Cleanup">🌊</span> Coastal Cleanup</li>
+        <li><span class="icon" title="Educational Support">📚</span> Educational Support</li>
+        <li><span class="icon" title="Health Awareness Campaigns">🏥</span> Health Awareness Campaigns</li>
+      </ul>
+    </section>
+    <section class="cards04">
+      <h2>Interests</h2>
+      <ul>
+        <li><span class="icon" title="Sustainability">♻️</span> Sustainability</li>
+        <li><span class="icon" title="Science Education">🔬</span> Science Education</li>
+        <li><span class="icon" title="Eco-friendly Transport">🚲</span> Eco-friendly Transport</li>
+        <li><span class="icon" title="Clean Energy Research">⚡</span> Clean Energy Research</li>
+      </ul>
+    </section>
+    <section class="cards form-card">
+      <h2>Contact Me</h2>
+      <!-- <div> -->
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" name="text" id="name"><br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email"><br>
+        <label for="p-no">Phone Number: </label>
+        <input type="number" name="p-no" id="p-no"><br>
+        <label for="message">Message: </label><br>
+        <textarea name="message" id="message"></textarea><br>
+        <div class="buttons"><button>reset</button>
+          <button value="submit">Submit</button>
+        </div>
+
+
+      </form>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content container">
+            <p>&copy; 2025 EnerFlow. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+                <a href="#">
+                    <i class="fab fa-facebook-f social-icon"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter social-icon"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-linkedin-in social-icon"></i>
+                </a>
+            </div>
+            <!-- Link to individual student's editor page as per coursework -->
+            <p class="editor-link">
+                <a href="page_editor_student_name.html">Page Editor:Shavini Fernando</a>
+            </p>
+        </div>
+    </footer>
+
+  </main>
+
+  </div>
+
+
+
+</body>
+
+</html>

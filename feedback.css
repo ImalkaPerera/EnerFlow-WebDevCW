@@ -1,4 +1,4 @@
-body{
+/* body{
     background: linear-gradient(135eg,#1e3c72,#2a5298);
     background-color: #e2e8f0;
     font-family: 'Segeo UI',Arial, sans-serif;
@@ -8,7 +8,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-}
+} */
 h1{
     text-align: center;
     color:rgb(0, 0, 0);

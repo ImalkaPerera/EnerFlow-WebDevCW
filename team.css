@@ -1,4 +1,6 @@
-
+h1{
+  text-align: center;
+}
   .subtitle {
       text-align: center;
       margin-bottom: 40px;
@@ -21,11 +23,7 @@
       transition: transform 0.3s ease;
       position: relative;
   }
-  
-  .team-member:hover {
-      transform: translateY(-10px);
-  }
-  
+
   .member-image-container {
       height: 250px;
       overflow: hidden;
@@ -71,21 +69,5 @@
       color: #2c3e50;
   }
   
-  .member-role {
-      color: #7f8c8d;
-      font-size: 0.9em;
-  }
-  
-  .back-to-top {
-      display: block;
-      text-align: center;
-      margin-top: 40px;
-      color: #3498db;
-      text-decoration: none;
-      font-weight: bold;
-  }
-  
-  .back-to-top:hover {
-      text-decoration: underline;
-  }
+
   

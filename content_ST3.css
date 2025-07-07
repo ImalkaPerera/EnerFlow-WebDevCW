@@ -9,6 +9,10 @@ html{
 
 body {
     overflow-x: hidden;
+    font-family: "Inter", sans-serif;
+    background: #e2e8f0;
+    color: #1a202c;
+    line-height: 1.7;
 }
 
 .video-background {

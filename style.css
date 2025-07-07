@@ -6,12 +6,12 @@
     box-sizing: border-box;
 }
 
-body {
+/* body {
     font-family: "Inter", sans-serif;
     background: #e2e8f0;
     color: #1a202c;
     line-height: 1.7;
-}
+} */
 
 header {
     background-color: rgba(0, 0, 0, 0.5);

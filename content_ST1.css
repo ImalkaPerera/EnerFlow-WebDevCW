@@ -15,9 +15,12 @@
         body {
             font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #e2e8f0;
-            scroll-behavior: smooth;
+            scroll-behavior: smooth; 
+            color: #1a202c;
+            line-height: 1.7;
+}
 
-        }
+
 		
         main{
             max-width: 900px;

@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <title>EnerFlow | Table</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- import google font inter -->
+    <!-- import google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome for footer icons -->
+    <!-- import awesome font library for footer icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Global CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/officiallogo.png" type="image/x-icon">
     <style>
-        /* --- CSS Reset & Base Styles --- */
         * {
             margin: 0;
             padding: 0;
@@ -20,12 +20,11 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f0f9ff; /* A very light blue background */
-            color: #1f2937; /* Default text color (gray-800) */
+            background-color: #f0f9ff;
+            color: #1f2937;
             line-height: 1.7;
         }
 
-        /* --- Utility Classes --- */
         .wrapper {
             max-width: 1200px;
             margin: 0 auto;
@@ -36,7 +35,6 @@
             text-align: center;
         }
 
-        /* For visually hiding elements while keeping them accessible to screen readers */
         .sr-only {
             position: absolute;
             width: 1px;
@@ -49,28 +47,25 @@
             border-width: 0;
         }
 
-        /* --- Header & Footer --- */
-        /* --- Main Content & Typography --- */
         .main-header {
-            margin-bottom: 3rem; /* 48px */
+            margin-bottom: 3rem;
         }
 
         .main-header h2 {
-            font-size: 2.25rem; /* 36px */
+            font-size: 2.25rem;
             font-weight: 700;
-            color: #111827; /* Gray-900 */
+            color: #111827;
         }
 
         .main-header p {
-            margin-top: 1rem; /* 16px */
-            font-size: 1.125rem; /* 18px */
-            color: #4b5563; /* Gray-600 */
+            margin-top: 1rem;
+            font-size: 1.125rem;
+            color: #4b5563;
         }
-
-        /* --- Table Styling --- */
+        /* container for table */
         .table-container {
-            border-radius: 0.5rem; /* 8px */
-            overflow: scroll;
+            border-radius: 0.5rem;
+            overflow-x: scroll;
             background-color: white;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             transition: box-shadow 0.3s ease-in-out;
@@ -83,39 +78,37 @@
         table {
             width: 100%;
             text-align: left;
-            border-collapse: collapse; /* Ensures borders are clean */
+            border-collapse: collapse;
         }
         
         th, td {
-            padding: 1rem; /* 16px */
+            padding: 1rem;
         }
 
-        /* Table Header */
         thead .primary-header {
-            background-color: #1f2937; /* Gray-800 */
+            background-color: #1f2937;
             color: white;
             text-transform: uppercase;
-            font-size: 0.875rem; /* 14px */
+            font-size: 0.875rem;
         }
         
         thead .secondary-header {
-             background-color: #374151; /* Gray-700 */
-             color: white;
-             font-size: 0.875rem; /* 14px */
+            background-color: #374151;
+            color: white;
+            font-size: 0.875rem;
         }
 
         thead th {
-            font-weight: 600; /* semibold */
+            font-weight: 600;
         }
         
         .logo {
-            height: 2.5rem; /* 40px */
-            border-radius: 0.375rem; /* 6px */
+            height: 2.5rem;
+            border-radius: 0.375rem;
         }
 
-        /* Table Body */
         tbody tr {
-            border-bottom: 1px solid #e5e7eb; /* Gray-200 for divide effect */
+            border-bottom: 1px solid #e5e7eb;
             transition: all 0.2s ease-in-out;
         }
         
@@ -124,20 +117,20 @@
         }
 
         tbody tr:nth-child(even) {
-            background-color: #eff6ff; /* A very light blue (blue-100) */
+            background-color: #eff6ff;
         }
 
         tbody tr:hover {
-            background-color: #dbeafe; /* A slightly darker blue on hover (blue-200) */
+            background-color: #dbeafe;
             transform: scale(1.02);
         }
         
         tbody td:first-child {
-            font-weight: 600; /* semibold */
+            font-weight: 600;
         }
 
         tbody a {
-            color: #2563eb; /* blue-600 */
+            color: #2563eb;
             text-decoration: none;
         }
 
@@ -147,45 +140,44 @@
         
         .status-yes {
             font-weight: 600;
-            color: #16a34a; /* green-600 */
+            color: #16a34a;
         }
         
         .status-no {
             font-weight: 600;
-            color: #dc2626; /* red-600 */
+            color: #dc2626;
         }
 
-        /* --- References Section --- */
         .references-section {
-            background-color: #eff6ff; /* blue-100 */
-            border-top: 2px solid #60a5fa; /* blue-400 */
-            margin-top: 3rem; /* Add some space above the section */
+            background-color: #eff6ff;
+            border-top: 2px solid #60a5fa;
+            margin-top: 3rem;
         }
 
         .references-section h3 {
-            font-size: 1.5rem; /* 24px */
+            font-size: 1.5rem;
             font-weight: 700;
-            color: #111827; /* gray-900 */
-            margin-bottom: 1rem; /* 16px */
+            color: #111827;
+            margin-bottom: 1rem;
         }
 
         .references-section p {
-            margin-bottom: 1.5rem; /* 24px */
-            color: #374151; /* gray-700 */
+            margin-bottom: 1.5rem;
+            color: #374151;
         }
 
         .references-section ul {
             list-style-type: disc;
             list-style-position: inside;
-            color: #1f2937; /* gray-800 */
+            color: #1f2937;
         }
         
         .references-section li {
-            margin-bottom: 0.75rem; /* 12px */
+            margin-bottom: 0.75rem;
         }
 
         .references-section a {
-            color: #1d4ed8; /* blue-700 */
+            color: #1d4ed8;
         }
         
         .references-section a:hover {
@@ -195,7 +187,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="logo-container">
             <img src="images/officiallogo.png" alt="EnerFlow Logo" height="40">
@@ -212,25 +203,20 @@
         </nav>
     </header>
 
-    <!-- Main Content Area -->
     <main class="wrapper">
         <div class="main-header text-center">
             <h2>Global Progress on Clean Energy</h2>
             <p>A comparative look at how nations are advancing towards affordable and clean energy for all.</p>
         </div>
 
-        <!-- Table Container -->
         <div class="table-container">
             <table>
-                <!-- Table Caption for Accessibility -->
                 <caption class="sr-only">
                     Affordable and Clean Energy Data by Country
                 </caption>
                 
-                <!-- Table Header -->
                 <thead>
                     <tr class="primary-header">
-                        <!-- Merged cell for the Company Logo -->
                         <th scope="col">
                             <img src="images/officiallogo.png" alt="Website Logo" class="logo">
                         </th>
@@ -246,7 +232,6 @@
                     </tr>
                 </thead>
                 
-                <!-- Table Body -->
                 <tbody>
                     <tr>
                         <td>Germany</td>
@@ -276,7 +261,7 @@
                         <td><a href="#">Geothermal Power Plants</a></td>
                         <td class="text-center"><span class="status-yes">Yes</span></td>
                     </tr>
-                     <tr>
+                    <tr>
                         <td>China</td>
                         <td>100%</td>
                         <td>29%</td>
@@ -290,7 +275,7 @@
                         <td><a href="#">Rural Electrification Agency</a></td>
                         <td class="text-center"><span class="status-no">No</span></td>
                     </tr>
-                     <tr>
+                    <tr>
                         <td>United States</td>
                         <td>100%</td>
                         <td>21%</td>
@@ -309,7 +294,6 @@
         </div>
     </main>
     
-    <!-- Data Sources & References Section -->
     <section class="references-section">
         <div class="wrapper">
             <h3>Data Sources & References</h3>
@@ -324,11 +308,8 @@
                 <li>
                     Our World in Data. (2024). *Renewable Energy*. Retrieved from <a href="https://ourworldindata.org/renewable-energy">ourworldindata.org</a>
                 </li>
-                 <li>
-                    Enerdata. (2024). *Global Energy & CO2 Data*. Retrieved from <a href="https://yearbook.enerdata.net/">yearbook.enerdata.net</a>
-                 </li>
                 <li>
-                    Placeholder Images. (2024). All logos and flag images are placeholders provided by <a href="https://placehold.co/">placehold.co</a>.
+                    Enerdata. (2024). *Global Energy & CO2 Data*. Retrieved from <a href="https://yearbook.enerdata.net/">yearbook.enerdata.net</a>
                 </li>
             </ul>
         </div>
@@ -350,7 +331,6 @@
                     <i class="fab fa-linkedin-in social-icon"></i>
                 </a>
             </div>
-            <!-- Link to individual student's editor page as per coursework -->
             <p class="editor-link">
                 <a href="ValidationAndEditorPages/pageEditor_ST2.html">Page Editor:Imalka Perera</a> |
                 <a href="ValidationAndEditorPages/validation_ST2.html">Validation Page </a>
